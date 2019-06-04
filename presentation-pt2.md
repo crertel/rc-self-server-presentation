@@ -224,7 +224,7 @@ In your home folder:
 $ mkdir ~/www
 $ sudo mkdir -p /srv/www
 $ sudo ln -s /home/<username>/www /srv/www/site_name
-$ sudo chmod -r 755 /srv/www
+$ sudo chmod -R 755 /srv/www
 $ echo "Hello, world!" >> ~/www/index.html
 ```
 
@@ -236,7 +236,7 @@ Change the contents of `/etc/nginx/sites-available/my_site` to look like:
 
 ```
 server {
-	root /srv/www/<site_name>
+	root /srv/www/<site_name>;
 	index index.html index.htm;
 
 	server_name minor.gripe www.minor.gripe;
@@ -252,6 +252,6 @@ server {
 ## Restart nginx
 
 ```bash
-$ sudo servic3e nginx restart
+$ sudo service nginx restart
 ```
 ---
