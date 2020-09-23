@@ -18,6 +18,10 @@
 
 --
 
+**Remember! This assumes a Debian 10 image.**
+
+--
+
 ## Connecting to your prgmr instance OOB console
 
 * What is an OOB consoole?
@@ -116,7 +120,7 @@ We want to stop using the (handy but limited) OOB console.
 ## Install SSH daemon
 
 ```bash
-$ sudo apt-get install ssh
+$ sudo apt-get install openssh-server
 ```
 
 --
@@ -124,7 +128,7 @@ $ sudo apt-get install ssh
 ## Check that SSH is running
 
 ```bash
-$ sudo service status sshd
+$ sudo systemctl status ssh
 ```
 
 --
